@@ -9,6 +9,7 @@ class AccountModel
     @ofType= {}
 
   add: (id, amount, type, parentId)->
+    assert not(id of @amounts), 'there is already a transaction with such id'
     @amounts[id] = amount
     @ofType[id] = type
 
