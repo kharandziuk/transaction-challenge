@@ -9,7 +9,7 @@ describe 'Model', ->
     model.add(1, 10, 'car')
     expect(
       model.get(1)
-    ).to.deep.equal([1, 10, 'car', undefined])
+    ).to.deep.equal([10, 'car', undefined])
 
 
   it 'can add few transactions of a different type and them', ->

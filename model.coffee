@@ -25,7 +25,7 @@ class AccountModel
 
   get: (id)->
     return [
-      id, @amounts[id], @ofType[id], @childToParent[id]
+      @amounts[id], @ofType[id], @childToParent[id]
     ]
 
   getListByType: (type)-> @types[type]
