@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "async": "^1.4.2",
-    "express": "^4.13.3"
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "underscore": "^1.8.3"
   }
 }

@@ -10,7 +10,7 @@ describe('API', ->
           # { "amount": 5000, "type": "cars" }
           # => { "status": "ok" }
           request(app)
-            .put('/transactionservice/transaction/11')
+            .put('/transactionservice/transaction/10')
             .send({ amount: 5000, type: "cars" })
             .expect(200, { status: 'ok'})
             .end(cb)
@@ -19,15 +19,15 @@ describe('API', ->
             # { "amount": 10000, "type": "shopping", "parent_id": 10 }
             # => { "status": "ok" }
             request(app)
-              .put('/transactionservice/transaction/10')
+              .put('/transactionservice/transaction/11')
               .send({ amount: 10000, type: "shopping", parent_id: 10 })
               .expect(200, { status: 'ok'})
               .end(cb)
         (cb)->
           # GET /transactionservice/types/cars
-          # => [ 10 ]
+          # => [ 11 ]
           request(app)
-            .get('/transactionservice/transaction/10')
+            .get('/transactionservice/types/cars')
             .expect(200, [10])
             .end(cb)
         (cb)->
@@ -41,7 +41,7 @@ describe('API', ->
           # GET /transactionservice/sum/11
           # => { "sum": 10000 }
           request(app)
-            .get('/transactionservice/sum/10')
+            .get('/transactionservice/sum/11')
             .expect(200, {sum: 10000})
             .end(cb)
     ]
