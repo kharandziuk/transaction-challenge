@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.coffee",
   "scripts": {
-    "test": "mocha --compilers coffee:coffee-script/register"
+    "test": "mocha --compilers coffee:coffee-script/register",
+    "start": "nodemon app.coffee"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +13,7 @@
     "chai": "^3.3.0",
     "coffee-script": "^1.10.0",
     "mocha": "^2.3.3",
+    "nodemon": "^1.7.1",
     "supertest": "^1.1.0"
   },
   "dependencies": {

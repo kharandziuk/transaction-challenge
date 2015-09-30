@@ -52,3 +52,9 @@ app.use('/transactionservice', transactionRouter)
 
 
 module.exports = app
+
+if (require.main is module)
+  PORT = 8000
+  app.listen(PORT, ->
+    console.log("work on port #{PORT}")
+  )
