@@ -1,6 +1,7 @@
 request = require('supertest')
 async = require 'async'
 app = require '../app'
+
 describe('API', ->
   it('integration test', (done)->
     async.series([
